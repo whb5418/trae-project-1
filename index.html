@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">2048</h1>
+            <div class="scores">
+                <div class="score-box">
+                    <span class="label">分数</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-box best">
+                    <span class="label">最高分</span>
+                    <span class="value" id="best">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="intro">
+            <button id="newGame" class="new-game-btn">新游戏</button>
+            <p class="hint">使用方向键 ↑↓←→ 或滑动来移动方块</p>
+        </div>
+        
+        <div class="game-board" id="gameBoard">
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+            <div class="tiles-container" id="tilesContainer"></div>
+        </div>
+        
+        <div class="game-over-overlay" id="gameOverOverlay">
+            <div class="game-over-content">
+                <h2 id="gameOverTitle">游戏结束</h2>
+                <p id="finalScore">最终得分: 0</p>
+                <button id="restartBtn" class="new-game-btn">再玩一次</button>
+            </div>
+        </div>
+        
+        <div class="win-overlay" id="winOverlay">
+            <div class="win-content">
+                <h2>🎉 恭喜!</h2>
+                <p>你成功合成了 2048!</p>
+                <div class="win-buttons">
+                    <button id="continueBtn" class="continue-btn">继续游戏</button>
+                    <button id="restartWinBtn" class="new-game-btn">再玩一次</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>
