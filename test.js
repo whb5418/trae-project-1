@@ -196,7 +196,6 @@ class Game2048Test {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const test = new Game2048Test();
-    test.runAllTests();
-});
+// 测试不再自动运行，避免影响主游戏
+// 如需运行测试，请在浏览器控制台执行：
+// const test = new Game2048Test(); test.runAllTests();
