@@ -19,6 +19,11 @@ class Game2048 {
         this.gameOver = false;
         this.tileId = 0;
         
+        const tilesContainer = document.getElementById('tilesContainer');
+        if (tilesContainer) {
+            tilesContainer.innerHTML = '';
+        }
+        
         this.addRandomTile();
         this.addRandomTile();
         this.updateDisplay();
